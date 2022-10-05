@@ -93,6 +93,9 @@ set security dynamic-address feed-server canssoc url https://LOGIN:PASSWORD@SERV
 
 Replace `LOGIN` and `PASSWORD` with your CanSSOC MineMeld credentials, and replace `SERVERNAME` with the name of CanSSOC MineMeld server. Please notice the `:` character separating `LOGIN` and `PASSWORD`, and the `@` character separating credentials from `SERVERNAME`. 
 
+Since Juniper uses the format `https://LOGIN:PASSWORD@SERVERNAME`, neither the username nor the password can contain any of the following special characters: `@ # : /`. 
+If your username or password contains any of those characters, please contact CanSSOC to have your credentials reset without those special characters. 
+
 Credentials in the `url` definition won't be obfuscated in your Juniper SRX configuration, so make sure you maintain proper access control for your Juniper SRX configuration.
 
 **2. Define threat feeds provided by CanSSOC threat feeds server**
